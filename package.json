@@ -1,0 +1,19 @@
+{
+  "name": "karta-produktu",
+  "version": "1.0.0",
+  "description": "karta-produktu",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

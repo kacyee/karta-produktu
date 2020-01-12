@@ -1,0 +1,235 @@
+@import "variables.scss";
+@import "common.scss";
+@import "mixins.scss";
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+  color: $dark-gray;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0;
+  overflow-x: hidden;
+}
+.firstSection {
+  max-width: none;
+  background: $ultra-light-gray;
+  margin-top: $M-margin;
+  position: relative;
+  .row {
+    position: relative;
+  }
+  .leftSide {
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    @include md-max {
+      max-width: 100%;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      .btn-s {
+        align-self: center;
+      }
+    }
+  }
+  &__chairBackground {
+    position: absolute;
+    width: 100%;
+    margin-top: -5em;
+    bottom: 0;
+    z-index: 0;
+  }
+}
+
+.secondSection {
+  margin-top: $M-margin;
+  flex-direction: column;
+  .introText {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    @include md-max {
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .items {
+    display: flex;
+    justify-content: space-between;
+    @include md-max {
+      flex-wrap: wrap;
+    }
+    &__single {
+      text-align: center;
+      width: 23%;
+      max-width: 23%;
+      position: relative;
+      height: 100%;
+      @include md-max {
+        width: 48%;
+        max-width: 48%;
+      }
+      @include sm-max {
+        width: 100%;
+        max-width: 100%;
+      }
+      .hoverable {
+        h4 {
+          margin: 0.5em 0;
+        }
+        @include lg {
+          &:hover {
+            position: absolute;
+            z-index: 3;
+            box-shadow: 0px 30px 40px rgba(38, 38, 38, 0.3);
+            img {
+              width: 100%;
+            }
+            .items__single__description {
+              display: block;
+            }
+          }
+        }
+      }
+      img {
+        overflow: hidden;
+      }
+      &__description {
+        display: none;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0.5em 1em 1em 1em;
+        background: #fff;
+        @include md-max {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.thirdSection {
+  margin-top: $S-margin;
+  &__chessboard {
+    width: 100%;
+    .chessboardItem {
+      width: 100%;
+      display: flex;
+      @include md-max {
+        flex-direction: column;
+      }
+      img {
+        width: 48%;
+        @include md-max {
+          width: 100%;
+        }
+      }
+      &:nth-child(2n) {
+        @include lg {
+          .chessboardItem__description {
+            text-align: right;
+            margin-left: auto;
+            margin-right: $S-margin;
+          }
+        }
+        @include md-max {
+          img {
+            order: 1;
+            margin-top: $S-margin;
+          }
+          .chessboardItem__description {
+            order: 2;
+          }
+        }
+      }
+      &__description {
+        width: 40%;
+        margin-left: $S-margin;
+        margin-top: $S-margin;
+        @include md-max {
+          text-align: center;
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  &__cta {
+    margin: $S-margin auto 0 auto;
+  }
+}
+.fourthSection {
+  margin-top: $M-margin;
+  &__heading {
+    max-width: 55%;
+    margin: $S-margin auto 0 auto;
+    text-align: center;
+    @include sm-max {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+  &__items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 $S-margin;
+    .singleItem {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      @include sm-max {
+        width: 100%;
+      }
+      img {
+        margin-right: 1em;
+      }
+      margin-bottom: 1em;
+    }
+  }
+}
+.lastSection {
+  background: $ultra-light-gray;
+  margin-top: $M-margin;
+}
+.lastSection {
+  background: $ultra-light-gray;
+  margin-top: $M-margin;
+  position: relative;
+  .leftSide {
+    max-width: 25%;
+    margin: $S-margin 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    padding-left: $M-margin;
+    @include md-max {
+      max-width: 100%;
+    }
+    @include sm-max {
+      margin: 0;
+      text-align: center;
+      padding-left: 0;
+      .btn-s {
+        align-self: center;
+      }
+      padding-bottom: $S-margin;
+      padding-top: $S-margin;
+    }
+  }
+  &__chairBackground {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    margin-top: -5em;
+    bottom: 0;
+    z-index: 0;
+    right: 0;
+    @include md-max {
+      width: 100%;
+    }
+  }
+  margin-bottom: $L-margin;
+}
